@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes flame {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.2) translateY(-2px); }
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-15 {
+  transform: rotateY(15deg);
+}
+
+.rotate-x-10 {
+  transform: rotateX(10deg);
+}
+
+.-rotate-x-45 {
+  transform: rotateX(-45deg);
+}
+
+.blur-xs {
+  filter: blur(1px);
+}
+
+.animate-flicker {
+  animation: flicker 1.5s infinite;
+}
+
+.animate-flame {
+  animation: flame 1s infinite;
+}
+
+.animate-popup {
+  animation: popup 0.3s ease-out forwards;
+}
